@@ -23,7 +23,8 @@
 <a id="fxgl" class="anchor" href="#fxgl" aria-hidden="true"><span class="octicon octicon-link"></span></a>FXGL</h2>
 
 <p>Simple and easy to use JavaFX 8 game library<br>
-<a href="https://jitpack.io/#AlmasB/FXGL"><img src="https://img.shields.io/github/release/AlmasB/FXGL.svg?label=maven" alt="Release"></a></p>
+<a href="https://jitpack.io/#AlmasB/FXGL"><img src="https://img.shields.io/github/release/AlmasB/FXGL.svg?label=maven" alt="Release"></a>
+<a href="https://github.com/AlmasB/FXGL/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"> </a></p>
 
 <h2>
 <a id="use-case" class="anchor" href="#use-case" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use Case</h2>
@@ -45,7 +46,7 @@ If you have a use case (feature) that FXGL doesn't cover, drop me an email stati
 
 <div class="highlight highlight-source-shell"><pre>mvn package</pre></div>
 
-<p>This will generate FXGL-x.y.z.jar, sources and javadoc.</p>
+<p>This will generate FXGL-0.1.7.jar, sources and javadoc.</p>
 
 <h2>
 <a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h2>
@@ -63,7 +64,7 @@ If you have a use case (feature) that FXGL doesn't cover, drop me an email stati
 &lt;dependency&gt;
     &lt;groupId&gt;com.github.AlmasB&lt;/groupId&gt;
     &lt;artifactId&gt;FXGL&lt;/artifactId&gt;
-    &lt;version&gt;0.1.6-beta&lt;/version&gt;
+    &lt;version&gt;0.1.7&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -76,13 +77,13 @@ If you have a use case (feature) that FXGL doesn't cover, drop me an email stati
 }
 
 <span class="pl-en">dependencies</span> {
-        compile <span class="pl-s"><span class="pl-pds">'</span>com.github.AlmasB:FXGL:0.1.6-beta<span class="pl-pds">'</span></span>
+    compile <span class="pl-s"><span class="pl-pds">'</span>com.github.AlmasB:FXGL:0.1.7<span class="pl-pds">'</span></span>
 }</pre></div>
 
 <h2>
 <a id="setup-general" class="anchor" href="#setup-general" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (General)</h2>
 
-<p>Download the latest .jar from jar/ (or the one built yourself) and add it to the build path
+<p>Download FXGL-0.1.7.jar from <a href="https://github.com/AlmasB/FXGL/releases">Releases</a> (or the one built yourself) and add it to the build path
 in your IDE. That's it, you're all set! See below setup for some IDEs</p>
 
 <h2>
@@ -102,6 +103,15 @@ in your IDE. That's it, you're all set! See below setup for some IDEs</p>
 <li>Choose Project Name -&gt; Finish</li>
 <li>Right-click on the created project -&gt; Build Path -&gt; Configure Build Path -&gt; 
 Libraries Tab -&gt; Add External JAR -&gt; Navigate and Select downloaded FXGL jar</li>
+</ol>
+
+<h2>
+<a id="setup-intellij-idea-tested-with-141" class="anchor" href="#setup-intellij-idea-tested-with-141" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (IntelliJ IDEA, tested with 14.1)</h2>
+
+<ol>
+<li>Create Project</li>
+<li>File -&gt; Project Structure</li>
+<li>Libraries -&gt; Add Java -&gt; Navigate and Select downloaded FXGL jar</li>
 </ol>
 
 <h2>
@@ -148,7 +158,7 @@ and as it is now it doesn't have much production value.</p>
 <h2>
 <a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h2>
 
-<p>FXGL 0.1.6 (latest) supports:</p>
+<p>FXGL 0.1.7 (latest) supports:</p>
 
 <ul>
 <li>Full JavaFX Integration (FXGL is built on top of JavaFX 8)</li>
@@ -159,6 +169,7 @@ and as it is now it doesn't have much production value.</p>
 <li>Basic Audio System</li>
 <li>Basic Particle System with Canvas Rendering</li>
 <li>Multi-Layer Rendering</li>
+<li>Dynamic Texture Manipulation (Texture Processing + Sprite Sheet Animations)</li>
 <li>Entity Component/Control System</li>
 <li>Time Management System</li>
 <li>Global and Scoped Event System</li>
