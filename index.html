@@ -22,7 +22,7 @@
       <h2>
 <a id="fxgl" class="anchor" href="#fxgl" aria-hidden="true"><span class="octicon octicon-link"></span></a>FXGL</h2>
 
-<p>Simple and easy to use JavaFX 8 game library<br>
+<p>Simple and easy to use (hopefully!) JavaFX 8 game library<br>
 <a href="https://jitpack.io/#AlmasB/FXGL"><img src="https://img.shields.io/github/release/AlmasB/FXGL.svg?label=maven" alt="Release"></a>
 <a href="https://github.com/AlmasB/FXGL/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"> </a></p>
 
@@ -34,7 +34,7 @@ It is primarily aimed at people who wish to learn and practise game development.
 It also takes care of the common boilerplate code, so it can be used for fast prototyping.
 For larger projects the library may not be as suitable, whereas advanced programmers will probably want to work
 with JavaFX directly.
-If you have a use case (feature) that FXGL doesn't cover, drop me an email stating the use case and what you have already tried.</p>
+If you have a use case (feature) that FXGL doesn't cover, raise an issue, carefully describing the use case.</p>
 
 <h2>
 <a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h2>
@@ -46,12 +46,12 @@ If you have a use case (feature) that FXGL doesn't cover, drop me an email stati
 
 <div class="highlight highlight-source-shell"><pre>mvn package</pre></div>
 
-<p>This will generate FXGL-0.1.7.jar, sources and javadoc.</p>
+<p>This will generate FXGL-0.1.8.jar, sources and javadoc.</p>
 
 <h2>
 <a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h2>
 
-<p>Depending on what IDE or build tool you are using choose appropriate setup steps.</p>
+<p>Choose setup steps based on your IDE/build tool.</p>
 
 <h2>
 <a id="setup-maven" class="anchor" href="#setup-maven" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (Maven)</h2>
@@ -64,7 +64,7 @@ If you have a use case (feature) that FXGL doesn't cover, drop me an email stati
 &lt;dependency&gt;
     &lt;groupId&gt;com.github.AlmasB&lt;/groupId&gt;
     &lt;artifactId&gt;FXGL&lt;/artifactId&gt;
-    &lt;version&gt;0.1.7&lt;/version&gt;
+    &lt;version&gt;0.1.8&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -77,14 +77,14 @@ If you have a use case (feature) that FXGL doesn't cover, drop me an email stati
 }
 
 <span class="pl-en">dependencies</span> {
-    compile <span class="pl-s"><span class="pl-pds">'</span>com.github.AlmasB:FXGL:0.1.7<span class="pl-pds">'</span></span>
+    compile <span class="pl-s"><span class="pl-pds">'</span>com.github.AlmasB:FXGL:0.1.8<span class="pl-pds">'</span></span>
 }</pre></div>
 
 <h2>
 <a id="setup-general" class="anchor" href="#setup-general" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (General)</h2>
 
-<p>Download FXGL-0.1.7.jar from <a href="https://github.com/AlmasB/FXGL/releases">Releases</a> (or the one built yourself) and add it to the build path
-in your IDE. That's it, you're all set! See below setup for some IDEs</p>
+<p>Download FXGL-0.1.8.jar from <a href="https://github.com/AlmasB/FXGL/releases">Releases</a> (or the one built yourself)
+and add it to the build path in your IDE. That's it, you're all set!</p>
 
 <h2>
 <a id="setup-netbeans-tested-with-802" class="anchor" href="#setup-netbeans-tested-with-802" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (NetBeans, tested with 8.0.2)</h2>
@@ -96,7 +96,7 @@ in your IDE. That's it, you're all set! See below setup for some IDEs</p>
 </ol>
 
 <h2>
-<a id="setup-eclipse-tested-with-45" class="anchor" href="#setup-eclipse-tested-with-45" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (Eclipse, tested with 4.5)</h2>
+<a id="setup-eclipse-tested-with-451" class="anchor" href="#setup-eclipse-tested-with-451" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (Eclipse, tested with 4.5.1)</h2>
 
 <ol>
 <li>File -&gt; New Java Project</li>
@@ -106,7 +106,7 @@ Libraries Tab -&gt; Add External JAR -&gt; Navigate and Select downloaded FXGL j
 </ol>
 
 <h2>
-<a id="setup-intellij-idea-tested-with-141" class="anchor" href="#setup-intellij-idea-tested-with-141" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (IntelliJ IDEA, tested with 14.1)</h2>
+<a id="setup-intellij-idea-tested-with-15" class="anchor" href="#setup-intellij-idea-tested-with-15" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (IntelliJ IDEA, tested with 15)</h2>
 
 <ol>
 <li>Create Project</li>
@@ -117,7 +117,8 @@ Libraries Tab -&gt; Add External JAR -&gt; Navigate and Select downloaded FXGL j
 <h2>
 <a id="directory-structure-for-fxgl-applications" class="anchor" href="#directory-structure-for-fxgl-applications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Directory Structure for FXGL Applications</h2>
 
-<p>This matches the Eclipse/NetBeans structure but should work with other IDEs.
+<p>This matches a typical IDE directory structure. For Maven users source root is "src/main/java" and assets
+should be in "src/main/resources".
 This allows easy packaging and deployment, as all assets packaged into jar will continue loading with
 exactly the same code.</p>
 
@@ -143,10 +144,7 @@ The videos will walk you through the basics.</p>
 <h2>
 <a id="notes" class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h2>
 
-<p>FXGL is in early stages of development. Hence, the API and functionality are likely to change from version to version.
-So I wouldn't recommend building a full scale application if you want to be able to use latest versions of FXGL.
-The plan is to make the API robust, stable and intuitive by v 0.5.
-If certain parts of documentation are ambiguous or incorrect/missing please let me know.
+<p>If certain parts of documentation are ambiguous/incorrect/missing please let me know or raise an issue.
 Any testing, feedback and bug reports are welcome <br></p>
 
 <p>3D features and port to mobile will be considered in the future. <br></p>
@@ -156,13 +154,13 @@ Most of the code follows "some" design principles and practices, but overall I w
 and as it is now it doesn't have much production value.</p>
 
 <h2>
-<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h2>
+<a id="latest-release-features" class="anchor" href="#latest-release-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Latest Release Features</h2>
 
-<p>FXGL 0.1.7 (latest) supports:</p>
+<p>FXGL 0.1.8 supports:</p>
 
 <ul>
 <li>Full JavaFX Integration (FXGL is built on top of JavaFX 8)</li>
-<li>JBox2D Physics Engine Integration (v.2.2.1.1, <a href="https://github.com/jbox2d/jbox2d">https://github.com/jbox2d/jbox2d</a>)</li>
+<li>JBox2D Physics Engine Integration (v.2.3.0, <a href="https://github.com/jbox2d/jbox2d">https://github.com/jbox2d/jbox2d</a>)</li>
 <li>Basic Game Loop</li>
 <li>Basic Logging</li>
 <li>Basic Performance Monitor</li>
@@ -181,9 +179,11 @@ and as it is now it doesn't have much production value.</p>
 <li>AI Pathfinding (A star search)</li>
 <li>Quick Time Events (QTE) (<b>API INCOMPLETE</b>)</li>
 <li>Intro Video / Animation (also supports custom intro)</li>
-<li>Main Menu + Game Menu (also supports custom Main Menu and Game Menu)</li>
+<li>Few Built-in Styles of Main Menu + Game Menu (also supports custom Main Menu and Game Menu)</li>
 <li>Custom Modifiable UI elements (Dialogs, Bars, Buttons, etc)</li>
+<li>Custom Global CSS to use with existing menus / UI elements</li>
 <li>Saving / Loading System</li>
+<li>User Profiles (Save/Load/Restore Game Settings)</li>
 <li>Other minor game dev features</li>
 </ul>
 
@@ -197,7 +197,9 @@ the next release.</p>
 <a id="few-simple-projects-so-far" class="anchor" href="#few-simple-projects-so-far" aria-hidden="true"><span class="octicon octicon-link"></span></a>Few Simple Projects So Far<br>
 </h2>
 
-<p><img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/FXGL_Menu.jpg">
+<p><img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/FXGL_menu2.jpg">
+<img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/FXGL_cannon.jpg">
+<img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/FXGL_Menu.jpg">
 <img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/FXGL_Pacman.png">
 <img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/FXGL_Physics.jpg">
 <img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/FXGL_Platformer.jpg">
@@ -206,15 +208,10 @@ the next release.</p>
 Sprites can be found on <a href="http://opengameart.org/">http://opengameart.org/</a></p>
 
 <h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
-
-<p>MIT, so you can do anything you want with the code.</p>
-
-<h2>
 <a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h2>
 
-<p><a href="mailto:almaslvl@gmail.com">almaslvl@gmail.com</a>, <a href="https://plus.google.com/+AlmasB0/about">https://plus.google.com/+AlmasB0/about</a><br>
-Make sure to put "FXGL" as the email subject for faster response.</p>
+<p>Email: <a href="mailto:almaslvl@gmail.com">almaslvl@gmail.com</a><br>
+<a href="https://plus.google.com/+AlmasB0/about">Google+</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/AlmasB/FXGL">FXGL</a> is maintained by <a href="https://github.com/AlmasB">AlmasB</a>.</span>
