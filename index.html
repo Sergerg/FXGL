@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <title>FXGL by AlmasB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/gh-buttons.css" media="screen">
+
+  
   </head>
-  <body>
+  <body onload="javascript:onLoad()">
     <section class="page-header">
-      <h1 class="project-name">FXGL</h1>
+      <h1 class="project-name">FXGL 0.1.8</h1>
       <h2 class="project-tagline">JavaFX 8 Game Library</h2>
       <a href="https://github.com/AlmasB/FXGL" class="btn">View on GitHub</a>
+      <a href="https://github.com/AlmasB/FXGL/releases" class="btn">Download .jar</a>
       <a href="https://github.com/AlmasB/FXGL/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/AlmasB/FXGL/tarball/master" class="btn">Download .tar.gz</a>
     </section>
@@ -23,8 +28,8 @@
 <a id="fxgl" class="anchor" href="#fxgl" aria-hidden="true"><span class="octicon octicon-link"></span></a>FXGL</h2>
 
 <p>Simple and easy to use (hopefully!) JavaFX 8 game library<br>
-<a href="https://jitpack.io/#AlmasB/FXGL"><img src="https://img.shields.io/github/release/AlmasB/FXGL.svg?label=maven" alt="Release"></a>
-<a href="https://github.com/AlmasB/FXGL/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-green.svg" alt="MIT License"> </a></p>
+<a href="https://jitpack.io/#AlmasB/FXGL"><img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/icons/FXGL.svg" alt="Release"></a>
+<a href="https://github.com/AlmasB/FXGL/blob/master/LICENSE"><img src="http://almasb.github.io/LearnJavaGameDev/tutorials/images/fxgl/icons/MIT.svg" alt="MIT License"> </a></p>
 
 <h2>
 <a id="use-case" class="anchor" href="#use-case" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use Case</h2>
@@ -51,8 +56,44 @@ If you have a use case (feature) that FXGL doesn't cover, raise an issue, carefu
 <h2>
 <a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h2>
 
-<p>Choose setup steps based on your IDE/build tool.</p>
+<p>Click to select setup steps based on your IDE/build tool.</p>
 
+
+<ul class="button-group">
+    <li><a href="" class="button pill" onclick="return select('Maven');">Maven</a></li>
+    <li><a href="" class="button pill" onclick="return select('Gradle');">Gradle</a></li>
+    <li><a href="" class="button pill" onclick="return select('NetBeans');">NetBeans</a></li>
+    <li><a href="" class="button pill" onclick="return select('Eclipse');">Eclipse</a></li>
+    <li><a href="" class="button pill" onclick="return select('IDEA');">IntelliJ IDEA</a></li>
+    <li><a href="" class="button pill" onclick="return select('General');">General</a></li>
+</ul>
+
+<script>
+function hideAll() {
+    document.getElementById("setupMaven").style.display = 'none';
+    document.getElementById("setupGradle").style.display = 'none';
+    document.getElementById("setupNetBeans").style.display = 'none';
+    document.getElementById("setupEclipse").style.display = 'none';
+    document.getElementById("setupIDEA").style.display = 'none';
+    document.getElementById("setupGeneral").style.display = 'none';
+}
+
+function select(type) {
+    hideAll();
+
+    document.getElementById('setup' + type).style.display = 'block';    
+
+    return false;
+}
+
+function onLoad() {
+    
+}
+</script>
+
+
+
+<div id="setupMaven">
 <h2>
 <a id="setup-maven" class="anchor" href="#setup-maven" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (Maven)</h2>
 
@@ -67,7 +108,9 @@ If you have a use case (feature) that FXGL doesn't cover, raise an issue, carefu
     &lt;version&gt;0.1.8&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
+</div>
 
+<div id="setupGradle" style="display:none">
 <h2>
 <a id="setup-gradle" class="anchor" href="#setup-gradle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (Gradle)</h2>
 
@@ -79,13 +122,18 @@ If you have a use case (feature) that FXGL doesn't cover, raise an issue, carefu
 <span class="pl-en">dependencies</span> {
     compile <span class="pl-s"><span class="pl-pds">'</span>com.github.AlmasB:FXGL:0.1.8<span class="pl-pds">'</span></span>
 }</pre></div>
+</div>
 
+<div id="setupGeneral" style="display:none">
 <h2>
 <a id="setup-general" class="anchor" href="#setup-general" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (General)</h2>
 
 <p>Download FXGL-0.1.8.jar from <a href="https://github.com/AlmasB/FXGL/releases">Releases</a> (or the one built yourself)
 and add it to the build path in your IDE. That's it, you're all set!</p>
 
+</div>
+
+<div id="setupNetBeans" style="display:none">
 <h2>
 <a id="setup-netbeans-tested-with-802" class="anchor" href="#setup-netbeans-tested-with-802" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (NetBeans, tested with 8.0.2)</h2>
 
@@ -94,7 +142,10 @@ and add it to the build path in your IDE. That's it, you're all set!</p>
 <li>Choose Project Name (optional: create main class) -&gt; Finish</li>
 <li>In the Projects view, right-click Libraries -&gt; Add Jar/Folder -&gt; Navigate and Select downloaded FXGL jar</li>
 </ol>
+</div>
 
+
+<div id="setupEclipse" style="display:none">
 <h2>
 <a id="setup-eclipse-tested-with-451" class="anchor" href="#setup-eclipse-tested-with-451" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (Eclipse, tested with 4.5.1)</h2>
 
@@ -104,7 +155,10 @@ and add it to the build path in your IDE. That's it, you're all set!</p>
 <li>Right-click on the created project -&gt; Build Path -&gt; Configure Build Path -&gt; 
 Libraries Tab -&gt; Add External JAR -&gt; Navigate and Select downloaded FXGL jar</li>
 </ol>
+</div>
 
+
+<div id="setupIDEA" style="display:none">
 <h2>
 <a id="setup-intellij-idea-tested-with-15" class="anchor" href="#setup-intellij-idea-tested-with-15" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup (IntelliJ IDEA, tested with 15)</h2>
 
@@ -113,12 +167,14 @@ Libraries Tab -&gt; Add External JAR -&gt; Navigate and Select downloaded FXGL j
 <li>File -&gt; Project Structure</li>
 <li>Libraries -&gt; Add Java -&gt; Navigate and Select downloaded FXGL jar</li>
 </ol>
+</div>
 
 <h2>
 <a id="directory-structure-for-fxgl-applications" class="anchor" href="#directory-structure-for-fxgl-applications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Directory Structure for FXGL Applications</h2>
 
-<p>This matches a typical IDE directory structure. For Maven users source root is "src/main/java" and assets
-should be in "src/main/resources".
+<p>This matches a typical IDE directory structure.
+For Maven users source root is <b>"src/main/java"</b> and assets
+should be in <b>"src/main/resources"</b>.
 This allows easy packaging and deployment, as all assets packaged into jar will continue loading with
 exactly the same code.</p>
 
@@ -213,12 +269,13 @@ Sprites can be found on <a href="http://opengameart.org/">http://opengameart.org
 <p>Email: <a href="mailto:almaslvl@gmail.com">almaslvl@gmail.com</a><br>
 <a href="https://plus.google.com/+AlmasB0/about">Google+</a></p>
 
+<!--
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/AlmasB/FXGL">FXGL</a> is maintained by <a href="https://github.com/AlmasB">AlmasB</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-
+-->
     </section>
 
   
