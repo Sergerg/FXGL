@@ -273,6 +273,26 @@ Sprites can be found on <a href="http://opengameart.org/">http://opengameart.org
 </p>
 
 <h2>
+<a id="reviews" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reviews</h2>
+
+<p id="reviewText">
+
+</p>
+
+<script type='text/javascript'>
+
+    function readTextFile(file) {
+        $.get(file, function(data) {
+            document.getElementById("reviewText").innerHTML = "Test Review: " + data;
+            //alert(data);
+        });
+    }
+
+    readTextFile("data.txt");
+
+</script>
+
+<h2>
 <a id="contact" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact</h2>
 
 <p>Email: <a href="mailto:almaslvl@gmail.com">almaslvl@gmail.com</a><br>
