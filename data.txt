@@ -1,3 +1,2 @@
-This is line 1
-This is line 2
-This is line 3
+https://github.com/Ergo21
+"This small, but powerful library helped me create my first game and has massively eased the workload within that task."
