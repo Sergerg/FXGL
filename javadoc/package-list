@@ -1,7 +1,7 @@
 com.almasb.fxgl.app
 com.almasb.fxgl.asset
 com.almasb.fxgl.audio
-com.almasb.fxgl.donotuse
+com.almasb.fxgl.concurrent
 com.almasb.fxgl.effect
 com.almasb.fxgl.entity
 com.almasb.fxgl.entity.animation
