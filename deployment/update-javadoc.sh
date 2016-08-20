@@ -17,8 +17,8 @@ fi
 # move to top dir of project
 cd ../
 
-# select gh-pages branch
-git checkout gh-pages
+# select gh-pages branch (we now run from gh-pages)
+# git checkout gh-pages
 
 # move to javadoc dir
 cd javadoc/
@@ -38,4 +38,4 @@ git commit -m 'updated javadoc'
 git push
 
 # go back to master branch
-git checkout master
+# git checkout master
