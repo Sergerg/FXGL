@@ -1,0 +1,7 @@
+Steps to update FXGL and its aspects on the web (so I don't forget in the future).
+
+1. Merge from x.y.z (new version) branch.
+2. git pull, mvn package
+3. Release via GitHub using x.y.z as tag with uber-jar. (jitpack.io will pick this up)
+4. Launch auto site generator.
+5. git checkout gh-pages, Run update-javadoc-main.sh ../target/FXGL-x.y.z-javadoc.jar (updates web javadoc)
